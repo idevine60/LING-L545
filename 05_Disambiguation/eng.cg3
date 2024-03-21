@@ -1,0 +1,12 @@
+DELIMITERS = "." ;
+
+LIST Prop = np ;
+LIST Adj = adj ;
+LIST Unlike = "unlike" ;
+
+SECTION
+
+# Remove the adjective reading of "unlike" if it is 
+# followed by a proper noun
+REMOVE Adj IF (0 Unlike) (1 Prop) ; 
+  # ... unlike Livy ...
