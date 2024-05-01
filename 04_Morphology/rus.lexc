@@ -1,0 +1,70 @@
+Multichar_Symbols
+
+%>                   ! Morpheme boundary
+%<n%>                ! Noun
+%<sg%>               ! Singular
+%<pl%>               ! Plural
+%<nom%>              ! Nominative
+%<gen%>              ! Genitive
+%<dat%>              ! Dative
+%<acc%>              ! Accusative
+%<ins%>              ! Instrumental
+%<pre%>              ! Preposition
+%{h%}                ! hardness
+%{g%}                ! hardness
+
+LEXICON Root
+
+POS ;
+
+LEXICON POS
+
+%<n%>: NounStems ;
+
+LEXICON N
+
+%<sg%>: SG ;
+%<pl%>: PL ;
+
+LEXICON SG
+
+%<nom%>: я # ;
+%<gen%>: и # ;
+%<dat%>: и # ;
+%<acc%>: ю # ;
+%<ins%>: ей # ;
+%<pre%>: и # ;
+
+LEXICON PL
+
+%<nom%>: и # ;
+%<gen%>: й # ;
+%<dat%>: ям # ;
+%<acc%>: и # ;
+%<ins%>: ями # ;
+%<pre%>: ях # ;
+
+LEXICON NounStems
+
+фантази:фантази N ; ! 
+галакти:галакти N ; !
+симпати:симпати N ; !
+гармони:гармони N ; !
+академи:академи N ; !
+экспедици:экспедици N ; !
+мелоди:мелоди N ; !
+дипломати:дипломати N ; !
+демократи:демократи N ; !
+манипуляци:манипуляци N ; !
+фотографи:фотографи N ; !
+реакци:реакци N ; !
+компози:компози N ; !
+эмоци:эмоци N ; !
+амнисти:амнисти N ; !
+коллекци:коллекци N ; !
+революци:революци N ; !
+федераци:федераци N ; !
+иллюзи:иллюзи N ; !
+професси:професси N ; !
+
+
