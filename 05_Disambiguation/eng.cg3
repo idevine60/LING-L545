@@ -1,8 +1,25 @@
 DELIMITERS = "." ;
 
+LIST V = vblex ;
+LIST N = n ;
+LIST A = adj ;
+LIST Pron = prn ;
+LIST Det = det ;
+LIST Adv = adv ;
 LIST Prop = np ;
 LIST Adj = adj ;
+LIST Prep = pr ;
+LIST ABBR = abbr ; 
+LIST Past = past ;
+LIST PP = pp ;
+LIST Have = "have" ;
+
+LIST By = "by" ;
+LIST Be = "be" ;
+
+LIST GER = ger ;
 LIST Unlike = "unlike" ;
+
 
 SECTION
 
@@ -10,3 +27,15 @@ SECTION
 # followed by a proper noun
 REMOVE Adj IF (0 Unlike) (1 Prop) ; 
   # ... unlike Livy ...
+
+SELECT ABBR IF (-1 N) ;
+
+REMOVE GER IF (-1 Det) ;
+
+SELECT Det IF (-1 Prep) (1 N) ; 
+
+REMOVE Pron IF (-1 V) ;
+
+Remove V IF (-1 Adj) ; 
+
+REMOVE PP IF (NEGATE -1* Have OR Be BARRIER (*) - Adv) ; # example from class
